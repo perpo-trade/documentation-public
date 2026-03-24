@@ -38,6 +38,7 @@
           },
           {
             "tab": "Introduction",
+            "hidden": true,
             "groups": [
               {
                 "group": "Getting Started",
@@ -375,7 +376,7 @@
                     "pages": [
                       "build-on-omnichain/restful-api/public/get-strategy-vault-nonce-for-account-transaction",
                       "build-on-omnichain/restful-api/public/create-strategy-vault-depositwithdrawal-request-with-account",
-                      "build-on-omnichain/restful-api/public/get-account\u2019s-strategy-vault-transaction-history"
+                      "build-on-omnichain/restful-api/public/get-account’s-strategy-vault-transaction-history"
                     ]
                   }
                 ]
@@ -599,6 +600,7 @@
           },
           {
             "tab": "SDKs",
+            "hidden": true,
             "groups": [
               {
                 "group": "Software Development Kits",
@@ -923,6 +925,7 @@
           },
           {
             "tab": "Strategy Vault",
+            "hidden": true,
             "groups": [
               {
                 "group": "Strategy Vault",
@@ -1100,7 +1103,7 @@
       },
       {
         "version": "pre-release",
-        "href": "https://staging-docs.orderly.network"
+        "hidden": true
       }
     ]
   },
