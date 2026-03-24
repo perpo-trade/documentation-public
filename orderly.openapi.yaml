@@ -17,7 +17,7 @@ paths:
 
         Only the main account is allowed to call this API.
 
-        Main account’s Orderly key can control sub-accounts.
+        Main account’s Perpo key can control sub-accounts.
       tags:
         - private
       parameters:
@@ -159,7 +159,7 @@ paths:
 
         `POST /v1/sub_account_settle_pnl`
 
-        Main account’s Orderly key can control sub-accounts.
+        Main account’s Perpo key can control sub-accounts.
       tags:
         - private
       parameters:
@@ -453,9 +453,9 @@ paths:
         `GET /v1/public/volume/stats`
 
 
-        Get the latest volume statistics of Orderly and its associated builders.
+        Get the latest volume statistics of Perpo and its associated builders.
         Note that for builder volume, the volume is counted as the sum of the
-        maker and taker volume, while for the full Orderly platform, the volume
+        maker and taker volume, while for the full Perpo platform, the volume
         is the total amount matched on the platform (ie taker and maker are not
         double-counted.)
       tags:
@@ -515,7 +515,7 @@ paths:
 
         `GET /v1/public/broker/name?broker_id={broker_id}`
 
-        Get the list of builders currently onboarded on Orderly.
+        Get the list of builders currently onboarded on Perpo.
       tags:
         - public
       parameters:
@@ -866,7 +866,7 @@ paths:
 
         `GET /v1/public/token`
 
-        Retrieves the available tokens to be used as collateral within Orderly.
+        Retrieves the available tokens to be used as collateral within Perpo.
       tags:
         - public
       parameters:
@@ -894,7 +894,7 @@ paths:
         `GET /v1/public/info`
 
 
-        Get available symbols that Orderly supports, and also send order
+        Get available symbols that Perpo supports, and also send order
         rules for each symbol. The definition of rules can be found at [Get Order Rules per Market](/docs/build-on-omnichain/restful-api/public/get-order-rules-per-symbol)
       tags:
         - public
@@ -915,7 +915,7 @@ paths:
 
         `GET /v1/public/index_price_source`
 
-        Retrieves the available tokens to be used as collateral within Orderly.
+        Retrieves the available tokens to be used as collateral within Perpo.
       tags:
         - public
       responses:
@@ -1590,7 +1590,7 @@ paths:
         the previous one if completed, otherwise the order will be rejected.
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -1621,7 +1621,7 @@ paths:
 
         Cancels a single order by `order_id`.
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -1664,7 +1664,7 @@ paths:
         `order_quantity` can be amended.
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -1899,7 +1899,7 @@ paths:
 
         **Prerequisites:** You must have an open isolated position on the specified symbol.
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -2129,7 +2129,7 @@ paths:
         all open orders if no filter is provided.
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -2286,7 +2286,7 @@ paths:
         `GET /v1/public/system_info`
 
 
-        Retrieve the current system maintenance status of Orderly. A
+        Retrieve the current system maintenance status of Perpo. A
         return value of status = 0 means the system is functioning properly and
         a return value of status = 2 means the system is under maintenance.
       tags:
@@ -2311,7 +2311,7 @@ paths:
         `GET /v1/registration_nonce`
 
 
-        Retrieve a nonce used for registering an account on Orderly. The
+        Retrieve a nonce used for registering an account on Perpo. The
         validity of the nonce value is `2` minutes. Each nonce can only be used
         once (ie for one account).
       tags:
@@ -2451,9 +2451,9 @@ paths:
         `POST /v1/register_account`
 
 
-        Registers a new account to Orderly. Note an account is unique
+        Registers a new account to Perpo. Note an account is unique
         for each wallet address + builder id (ie the same wallet address can have
-        multiple accounts with Orderly, 1 with each builder)
+        multiple accounts with Perpo, 1 with each builder)
       tags:
         - public
       parameters: []
@@ -2471,14 +2471,14 @@ paths:
                 $ref: "#/components/schemas/RegisterAccountResponse"
   /v1/get_orderly_key:
     get:
-      summary: Get Orderly Key
+      summary: Get Perpo Key
       deprecated: false
       description: |
         **Limit: 10 requests per 1 second per IP address**
 
         `GET /v1/get_orderly_key`
 
-        Check the validity of an Orderly access key attached to the account.
+        Check the validity of an Perpo access key attached to the account.
       tags:
         - public
       parameters:
@@ -2491,7 +2491,7 @@ paths:
             type: string
         - name: orderly_key
           in: query
-          description: The public key of the Orderly access key.
+          description: The public key of the Perpo access key.
           required: true
           example: ""
           schema:
@@ -2505,16 +2505,16 @@ paths:
                 $ref: "#/components/schemas/GetOrderlyKeyResponse"
   /v1/orderly_key:
     post:
-      summary: Add Orderly Key
+      summary: Add Perpo Key
       deprecated: false
       description: |
         **Limit: 10 requests per 1 second per IP address**
 
         `POST /v1/orderly_key`
 
-        Adds an Orderly access key to an account.
+        Adds an Perpo access key to an account.
 
-        Main account's Orderly key can control sub-account.
+        Main account's Perpo key can control sub-account.
       tags:
         - public
       parameters: []
@@ -2533,14 +2533,14 @@ paths:
 
   /v1/client/remove_orderly_key:
     post:
-      summary: Remove Orderly Key
+      summary: Remove Perpo Key
       deprecated: false
       description: |
         **Limit: 10 requests per 1 second per IP address**
 
         `POST /v1/client/remove_orderly_key`
 
-        Remove an Orderly key from an account, deactivating it from all usage
+        Remove an Perpo key from an account, deactivating it from all usage
       tags:
         - private
       parameters: []
@@ -2663,7 +2663,7 @@ paths:
 
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -2707,7 +2707,7 @@ paths:
         given or all of the given order_ids are invalid. 
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -2746,7 +2746,7 @@ paths:
         Cancel an order by `client_order_id`.
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -2796,7 +2796,7 @@ paths:
         invalid. 
 
 
-        Note: This endpoint requires `trading` scope in Orderly Key.
+        Note: This endpoint requires `trading` scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -3169,7 +3169,7 @@ paths:
         `GET /v1/withdraw_nonce`
 
 
-        Retrieve a nonce used for requesting a withdrawal on Orderly.
+        Retrieve a nonce used for requesting a withdrawal on Perpo.
         Each nonce can only be used once.
       tags:
         - private
@@ -3196,7 +3196,7 @@ paths:
         `GET /v1/settle_nonce`
 
 
-        Retrieve a nonce used for requesting a withdrawal on Orderly.
+        Retrieve a nonce used for requesting a withdrawal on Perpo.
         Each nonce can only be used once.
       tags:
         - private
@@ -3444,7 +3444,7 @@ paths:
 
         `GET /v1/internal_transfer_history`
 
-        Orderly key must has `asset` scope to access this endpoint.
+        Perpo key must has `asset` scope to access this endpoint.
       tags:
         - private
       parameters:
@@ -3528,14 +3528,14 @@ paths:
 
   /v1/client/key_info:
     get:
-      summary: Get Current Orderly Key Info
+      summary: Get Current Perpo Key Info
       deprecated: false
       description: |
         **Limit 10 requests per 60 seconds**
 
         `GET /v1/client/key_info`
 
-        Retrieve all the registered Orderly key pairs under the account.
+        Retrieve all the registered Perpo key pairs under the account.
       tags:
         - private
       parameters:
@@ -3559,20 +3559,20 @@ paths:
                 $ref: "#/components/schemas/KeyInfoResponse"
   /v1/client/orderly_key_ip_restriction:
     get:
-      summary: Get Orderly Key IP Restriction
+      summary: Get Perpo Key IP Restriction
       deprecated: false
       description: |
         **Limit 10 requests per 60 seconds**
 
         `GET /v1/client/orderly_key_ip_restriction`
 
-        Retrieves the current IP restriction of a particular Orderly key.
+        Retrieves the current IP restriction of a particular Perpo key.
       tags:
         - private
       parameters:
         - name: orderly_key
           in: query
-          description: The Orderly Key to query the IP restriction list
+          description: The Perpo Key to query the IP restriction list
           required: true
           example: ""
           schema:
@@ -3590,20 +3590,20 @@ paths:
                 $ref: "#/components/schemas/IpRestrictionResponse"
   /v1/client/set_orderly_key_ip_restriction:
     post:
-      summary: Set Orderly Key IP Restriction
+      summary: Set Perpo Key IP Restriction
       deprecated: false
       description: |
         **Limit: 10 requests per 60 seconds**
 
         `POST /v1/client/set_orderly_key_ip_restriction`
 
-        Set the IP restrictions of a particular Orderly key under the account.
+        Set the IP restrictions of a particular Perpo key under the account.
       tags:
         - private
       parameters:
         - name: orderly_key
           in: query
-          description: The Orderly Key to set the IP restriction list.
+          description: The Perpo Key to set the IP restriction list.
           required: true
           example: ""
           schema:
@@ -3630,20 +3630,20 @@ paths:
                 $ref: "#/components/schemas/SetIpRestrictionResponse"
   /v1/client/reset_orderly_key_ip_restriction:
     post:
-      summary: Reset Orderly Key IP Restriction
+      summary: Reset Perpo Key IP Restriction
       deprecated: false
       description: |
         **Limit: 10 requests per 60 seconds**
 
         `POST /v1/client/reset_orderly_key_ip_restriction`
 
-        Reset the IP restriction of a particular Orderly key under the account.
+        Reset the IP restriction of a particular Perpo key under the account.
       tags:
         - private
       parameters:
         - name: orderly_key
           in: query
-          description: The Orderly Key to set the IP restriction list
+          description: The Perpo Key to set the IP restriction list
           required: true
           example: ""
           schema:
@@ -3651,7 +3651,7 @@ paths:
         - name: reset_mode
           in: query
           description: >-
-            The new mode of the IP restriction for this Orderly Key
+            The new mode of the IP restriction for this Perpo Key
             (ALLOW_ALL_IPS, DISALLOW_ALL_IPS).
           required: true
           example: ""
@@ -3842,21 +3842,21 @@ paths:
   /v1/faucet/usdc:
     post:
       servers:
-        - url: https://testnet-operator-evm.orderly.org
-        - url: https://testnet-operator-sol.orderly.org
+        - url: https://testnet-operator-evm.perpo.trade
+        - url: https://testnet-operator-sol.perpo.trade
       summary: Get Faucet USDC(Testnet Only)
       deprecated: false
       description: >-
         For `EVM`:
 
 
-        `GET https://testnet-operator-evm.orderly.org/v1/faucet/usdc`
+        `GET https://testnet-operator-evm.perpo.trade/v1/faucet/usdc`
 
 
         For `Solana`:
 
 
-        `GET https://testnet-operator-sol.orderly.org/v1/faucet/usdc`
+        `GET https://testnet-operator-sol.perpo.trade/v1/faucet/usdc`
 
 
         Receive 1,000 USDC in the EVM Testnet environment or 100 USDC in the Solana Testnet environment. Each account may only use
@@ -3921,7 +3921,7 @@ paths:
         Sample request can be found [here](/docs/build-on-omnichain/user-flows/algo-order-samples)
 
 
-        Note: This endpoint requires trading scope in Orderly Key.
+        Note: This endpoint requires trading scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -4087,7 +4087,7 @@ paths:
         be amended.
 
 
-        Note: This endpoint requires trading scope in Orderly Key.
+        Note: This endpoint requires trading scope in Perpo Key.
       tags:
         - private
       parameters:
@@ -4480,7 +4480,7 @@ paths:
 
         `GET /v1/public/account`
 
-        Check if provided account account is registered with Orderly and it's respective builder.
+        Check if provided account account is registered with Perpo and it's respective builder.
       tags:
         - public
       parameters:
@@ -4605,28 +4605,28 @@ paths:
           required: false
           schema:
             type: string
-        - name: orderly-timestamp
+        - name: perpo-timestamp
           in: header
           description: ""
           required: true
           example: "1649920583000"
           schema:
             type: string
-        - name: orderly-account-id
+        - name: perpo-account-id
           in: header
           description: ""
           required: true
           example: "0x0f29bfb4c1bc9fea3f3be46bab6d795e22a6272354b136fde05f6b80cfcad546"
           schema:
             type: string
-        - name: orderly-key
+        - name: perpo-key
           in: header
           description: ""
           required: true
           example: ed25519:8tm7dnKYkSc3FzgPuJaw1wztr79eeZpN35nHW5pL5XhX
           schema:
             type: string
-        - name: orderly-signature
+        - name: perpo-signature
           in: header
           description: ""
           required: true
@@ -4784,28 +4784,28 @@ paths:
           example: "False"
           schema:
             type: boolean
-        - name: orderly-timestamp
+        - name: perpo-timestamp
           in: header
           description: ""
           required: true
           example: "1649920583000"
           schema:
             type: string
-        - name: orderly-account-id
+        - name: perpo-account-id
           in: header
           description: ""
           required: true
           example: "0x0f29bfb4c1bc9fea3f3be46bab6d795e22a6272354b136fde05f6b80cfcad546"
           schema:
             type: string
-        - name: orderly-key
+        - name: perpo-key
           in: header
           description: ""
           required: true
           example: ed25519:8tm7dnKYkSc3FzgPuJaw1wztr79eeZpN35nHW5pL5XhX
           schema:
             type: string
-        - name: orderly-signature
+        - name: perpo-signature
           in: header
           description: ""
           required: true
@@ -5840,22 +5840,22 @@ paths:
       tags:
         - client
       parameters:
-        - name: orderly-timestamp
+        - name: perpo-timestamp
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-account-id
+        - name: perpo-account-id
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-key
+        - name: perpo-key
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-signature
+        - name: perpo-signature
           in: header
           required: true
           schema:
@@ -6013,22 +6013,22 @@ paths:
       tags:
         - private
       parameters:
-        - name: orderly-timestamp
+        - name: perpo-timestamp
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-account-id
+        - name: perpo-account-id
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-key
+        - name: perpo-key
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-signature
+        - name: perpo-signature
           in: header
           required: true
           schema:
@@ -6060,22 +6060,22 @@ paths:
       tags:
         - private
       parameters:
-        - name: orderly-timestamp
+        - name: perpo-timestamp
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-account-id
+        - name: perpo-account-id
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-key
+        - name: perpo-key
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-signature
+        - name: perpo-signature
           in: header
           required: true
           schema:
@@ -6106,22 +6106,22 @@ paths:
       tags:
         - admin
       parameters:
-        - name: orderly-timestamp
+        - name: perpo-timestamp
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-account-id
+        - name: perpo-account-id
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-key
+        - name: perpo-key
           in: header
           required: true
           schema:
             type: string
-        - name: orderly-signature
+        - name: perpo-signature
           in: header
           required: true
           schema:
@@ -6165,7 +6165,7 @@ paths:
 
   /v1/delegate_orderly_key:
     post:
-      summary: Add Delegate Signer Orderly Key
+      summary: Add Delegate Signer Perpo Key
       deprecated: false
       description: |
         **Limit: 1 requests per second**
@@ -7449,14 +7449,14 @@ paths:
 
   /v1/sv/sp_orderly_key:
     post:
-      summary: Add SP Orderly Key
+      summary: Add SP Perpo Key
       description: |
 
         **Limit: 10 requests per second per IP address**
 
         `POST /v1/sv/sp_orderly_key`
 
-        Adds an Orderly access key to a SP account
+        Adds an Perpo access key to a SP account
       tags:
         - private
       requestBody:
@@ -7679,7 +7679,7 @@ paths:
 
   /v1/sv/protocol_revenue_share_history:
     get:
-      summary: Get Orderly Protocol Revenue Sharing History
+      summary: Get Perpo Protocol Revenue Sharing History
       description: |
 
         **Limit: 10 requests per second per account**
@@ -8420,7 +8420,7 @@ paths:
 components:
   parameters:
     orderly_timestamp:
-      name: orderly-timestamp
+      name: perpo-timestamp
       in: header
       description: ""
       required: true
@@ -8430,7 +8430,7 @@ components:
         type: string
       example: "1649920583000"
     orderly_account_id:
-      name: orderly-account-id
+      name: perpo-account-id
       in: header
       description: ""
       required: true
@@ -8440,7 +8440,7 @@ components:
         type: string
       example: 0x0f29bfb4c1bc9fea3f3be46bab6d795e22a6272354b136fde05f6b80cfcad546
     orderly_key:
-      name: orderly-key
+      name: perpo-key
       in: header
       description: ""
       required: true
@@ -8450,7 +8450,7 @@ components:
         type: string
       example: ed25519:8tm7dnKYkSc3FzgPuJaw1wztr79eeZpN35nHW5pL5XhX
     orderly_signature:
-      name: orderly-signature
+      name: perpo-signature
       in: header
       description: ""
       required: true
@@ -12632,7 +12632,7 @@ components:
               description: Chain ID of registering chain (within those that are supported by the Network)
             orderlyKey:
               type: string
-              description: Orderly Key to be added
+              description: Perpo Key to be added
             scope:
               type: string
               description: Valid nonce from Get Registration Nonce
@@ -12678,7 +12678,7 @@ components:
               description: "`EVM` or `SOL`"
             orderlyKey:
               type: string
-              description: Orderly Key to be added
+              description: Perpo Key to be added
             scope:
               type: string
               description: "Valid scopes are `read`, `trading` and `asset`; multiple scopes can be sent by separating scopes with comma such as `read,trading`"
@@ -12709,7 +12709,7 @@ components:
       properties:
         orderly_key:
           type: string
-          description: The Orderly key to be removed from the account
+          description: The Perpo key to be removed from the account
 
     OrderlyKeyResponse:
       allOf:
@@ -13102,7 +13102,7 @@ components:
           description: The address of the wallet signing the message object via EIP-712
         verifyingContract:
           type: string
-          description: Address of the Orderly ledger contract
+          description: Address of the Perpo ledger contract
         message:
           type: object
           description: Message object containing the message that is signed by the wallet owner
@@ -13159,7 +13159,7 @@ components:
           description: The address of the wallet signing the message object via EIP-712
         verifyingContract:
           type: string
-          description: Address of the Orderly ledger contract
+          description: Address of the Perpo ledger contract
         message:
           type: object
           description: Message object containing the message that is signed by the wallet owner
@@ -13314,7 +13314,7 @@ components:
           description: The address of the wallet signing the message object via EIP-712
         verifyingContract:
           type: string
-          description: Address of the Orderly ledger contract
+          description: Address of the Perpo ledger contract
         message:
           type: object
           description: Message object containing the message that is signed by the wallet owner
@@ -13356,7 +13356,7 @@ components:
           description: The address of the wallet signing the message object via EIP-712
         verifyingContract:
           type: string
-          description: Address of the Orderly ledger contract
+          description: Address of the Perpo ledger contract
         message:
           type: object
           description: Message object containing the message that is signed by the wallet owner
@@ -13579,7 +13579,7 @@ components:
         email:
           type: string
           description: email if bounded to the account
-          example: test@orderly.network
+          example: test@perpo.trade
         application_id:
           type: string
           description: wallet address of the account
@@ -13734,7 +13734,7 @@ components:
                         example: "Position information is incorrect due to a 1-minute delay."
                       url:
                         type: string
-                        example: "https://orderly.network/docs/release-notes/omnichain"
+                        example: "https://perpo.trade/docs/release-notes/omnichain"
 
     GetBrokerDailyResponse:
       allOf:
@@ -15361,11 +15361,11 @@ components:
                 total_released_trading_rewards_order:
                   type: number
                   example: 3591403.07726818
-                  description: The sum of all confirmed $ORDER trading rewards order on Orderly level
+                  description: The sum of all confirmed $ORDER trading rewards order on Perpo level
                 total_released_trading_rewards_escrow:
                   type: number
                   example: 0
-                  description: The sum of all confirmed es$ORDER trading rewards order on Orderly level
+                  description: The sum of all confirmed es$ORDER trading rewards order on Perpo level
                 current_epoch:
                   type: number
                   example: 66
@@ -15402,14 +15402,14 @@ components:
                         example: "Confirmed"
                         description: |
                           - `Ongoing` = Current epoch in progress
-                          - `Pending` = during the 7 days grace period where Orderly can stop/modify distribution.
+                          - `Pending` = during the 7 days grace period where Perpo can stop/modify distribution.
                           - `Confirmed` = After the 7 days grace period, rewards are finalized and ready for users to claim.
                           - `0` = Future epoch
                       r_major:
                         type: number
                         example: 150000
                         description: |
-                          The total amount of rewards Orderly distributed for this epoch.
+                          The total amount of rewards Perpo distributed for this epoch.
                           This value is 0 for epoch == current epoch 
 
                           Note: This value for might be updated during the 7 days grace period after the current epoch has ended
@@ -15417,7 +15417,7 @@ components:
                         type: number
                         example: 50000
                         description: |
-                          The total amount of rewards Orderly distributed for this epoch.
+                          The total amount of rewards Perpo distributed for this epoch.
                           This value is 0 for epoch == current epoch 
 
                           Note: This value for might be updated during the 7 days grace period after the current epoch has ended
@@ -15928,7 +15928,7 @@ components:
                   example: "100"
 
 servers:
-  - url: https://api.orderly.org
+  - url: https://api.perpo.trade
     description: Mainnet
-  - url: https://testnet-api.orderly.org
+  - url: https://testnet-api.perpo.trade
     description: Testnet
