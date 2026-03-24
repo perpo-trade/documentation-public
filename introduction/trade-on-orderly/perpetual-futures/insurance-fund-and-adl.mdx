@@ -1,9 +1,9 @@
 ---
 title: "Insurance Fund & ADL"
-description: "The Orderly Insurance Fund functions as a safeguard to protect bankrupt traders from being insolvent."
+description: "The Perpo Insurance Fund functions as a safeguard to protect bankrupt traders from being insolvent."
 ---
 
-Every trading platform needs a safety net. On Orderly, the Insurance Fund is that safety net. It steps in when a trader's account goes underwater (meaning their losses exceed their collateral), making sure those bad debts don't spill over and hurt everyone else on the platform.
+Every trading platform needs a safety net. On Perpo, the Insurance Fund is that safety net. It steps in when a trader's account goes underwater (meaning their losses exceed their collateral), making sure those bad debts don't spill over and hurt everyone else on the platform.
 
 This page explains how the Insurance Fund works, how it grows, and what happens in the rare case that even the Insurance Fund runs low.
 
@@ -11,7 +11,7 @@ This page explains how the Insurance Fund works, how it grows, and what happens 
 
 An account is bankrupt if it has a negative total collateral value. In plain terms, the trader owes more than they have.
 
-When this happens, the Orderly Insurance Fund takes over all of that account's positions and debt. This protects other users from absorbing those losses.
+When this happens, the Perpo Insurance Fund takes over all of that account's positions and debt. This protects other users from absorbing those losses.
 
 ## How the Insurance Fund grows
 
@@ -46,6 +46,6 @@ ADL is the last resort. It only kicks in when all other safety mechanisms have f
 
 3. The Insurance Fund Margin Ratio falls below the `min_insurance_fund_margin_ratio`,
 
-When ADL activates, Orderly selects the traders who have both the most profit and the most leverage. Their positions are then used to offset the Insurance Fund's positions in each perpetual market, one by one.
+When ADL activates, Perpo selects the traders who have both the most profit and the most leverage. Their positions are then used to offset the Insurance Fund's positions in each perpetual market, one by one.
 
 In practice, this means a highly profitable, highly leveraged trader could have part of their position automatically closed to keep the system solvent. This is extremely rare, but it is important to understand that it exists as a final safeguard.

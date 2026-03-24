@@ -1,9 +1,9 @@
 ---
 title: "Margin, Leverage & PnL"
-description: "Explanation of notional value, margin ratio, leverage tiers, and unrealized PnL on Orderly."
+description: "Explanation of notional value, margin ratio, leverage tiers, and unrealized PnL on Perpo."
 ---
 
-This page covers the core concepts you need to understand before trading perpetual futures on Orderly: how much your positions are worth (notional value), how much collateral you need (margin), and how profits and losses are tracked (PnL).
+This page covers the core concepts you need to understand before trading perpetual futures on Perpo: how much your positions are worth (notional value), how much collateral you need (margin), and how profits and losses are tracked (PnL).
 
 ## Notional Value
 
@@ -52,7 +52,7 @@ MMR i = Max(Base MMR i, Base MMR i / Base IMR i * IMR Factor i * Abs(Position No
   after launch.
 </Note>
 
-The table below shows the margin parameters for every perpetual market on Orderly. The "Base IMR" column also shows the maximum leverage in parentheses.
+The table below shows the margin parameters for every perpetual market on Perpo. The "Base IMR" column also shows the maximum leverage in parentheses.
 
 | Perp Market     | Base IMR (max leverage) | Base MMR | IMR Factor   |
 | --------------- | ----------------------- | -------- | ------------ |
@@ -183,7 +183,7 @@ A few key points to understand:
 
 ### How the settlement process works
 
-When your account (Account X) triggers a PnL settlement, Orderly finds the accounts with the largest unsettled PnL on the opposite side. Starting with the largest, each account's unsettled PnL is offset against yours until your PnL is fully settled.
+When your account (Account X) triggers a PnL settlement, Perpo finds the accounts with the largest unsettled PnL on the opposite side. Starting with the largest, each account's unsettled PnL is offset against yours until your PnL is fully settled.
 
 **Example:** Account X has +20,000 USDC of unsettled PnL and a balance of 100 USDC. The two largest opposing accounts are Account A (-15,000 USDC) and Account B (-5,000 USDC):
 
@@ -202,7 +202,7 @@ All settling PnL does is move profits into user's account so user is able to wit
 
 ## Max notional amount
 
-Orderly sets a cap on how large your position can be in any single perpetual market. This is a risk management measure. These limits will be increased and/or removed after Beta launch.
+Perpo sets a cap on how large your position can be in any single perpetual market. This is a risk management measure. These limits will be increased and/or removed after Beta launch.
 
 | Perp Market | Max Notional (USDC) |
 | ----------- | ------------------- |
