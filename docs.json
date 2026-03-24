@@ -7,7 +7,7 @@
     "light": "#BE7CFF",
     "dark": "#aa5cf8"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/logo/perpo_logo.svg",
   "contextual": {
     "options": [
       "copy",
@@ -1137,19 +1137,11 @@
     "image": "/images/sdks/color-bg.png"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Socials",
-        "href": "https://linktr.ee/orderlynetwork"
-      }
-    ]
+    "links": []
   },
   "footer": {
     "socials": {
-      "twitter": "https://twitter.com/OrderlyNetwork",
-      "linkedin": "https://www.linkedin.com/company/perpo-network/",
-      "discord": "https://discord.gg/orderlynetwork",
-      "medium": "https://medium.com/@orderlynetwork"
+      "twitter": "https://twitter.com/OrderlyNetwork"
     }
   },
   "redirects": [
