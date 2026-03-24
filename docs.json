@@ -100,6 +100,7 @@
               },
               {
                 "group": "DEX's Affiliate Program",
+                "hidden": true,
                 "pages": [
                   "introduction/be-a-broker/orderly-dex-affiliate-program-affiliates-quick-guide",
                   "introduction/be-a-broker/orderly-dex-affiliate-program-brokers-quick-guide",
@@ -117,6 +118,7 @@
               },
               {
                 "group": "Orderly One",
+                "hidden": true,
                 "pages": [
                   "introduction/orderly-one/builder-guidelines",
                   "introduction/orderly-one/supplemental-terms-for-dexes",

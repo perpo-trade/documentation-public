@@ -3,9 +3,9 @@ title: "Mechanics"
 description: "How OmniVault shares, deposits, withdrawals, and strategy-provider PnL distribution work."
 ---
 
-Orderly OmniVault deploys strategies with vault assets to generate yields. The PnL gain/loss are proportionally split across all its Liquidity Providers (LPs), according to the number of shares each LP owns.
+Perpo OmniVault deploys strategies with vault assets to generate yields. The PnL gain/loss are proportionally split across all its Liquidity Providers (LPs), according to the number of shares each LP owns.
 
-The lifecycle of Orderly OmniVault is summarised as follows:
+The lifecycle of Perpo OmniVault is summarised as follows:
 
 1. Users deposit USDC into the OmniVault
 
@@ -17,10 +17,10 @@ The lifecycle of Orderly OmniVault is summarised as follows:
 
 &nbsp;
 
-Refer below to learn more about the key concepts of Orderly OmniVault:
+Refer below to learn more about the key concepts of Perpo OmniVault:
 
 ## Shares
-Shares are used to track the portion of Orderly OmniVault asset ownership of a LP. Each LP’s shareholding is traceable both on-chain and off-chain. Shares<a href="#ref11"><sup>1 </sup></a> &nbsp;are non-tokenized, meaning they are neither tradable nor transferrable.
+Shares are used to track the portion of Perpo OmniVault asset ownership of a LP. Each LP’s shareholding is traceable both on-chain and off-chain. Shares<a href="#ref11"><sup>1 </sup></a> &nbsp;are non-tokenized, meaning they are neither tradable nor transferrable.
 
 Share price is calculated as:
 
@@ -36,7 +36,7 @@ For withdrawals, claimable amounts are calculated as:
 
 ## Vault Period
 
-Orderly OmniVault uses the concept of a vault period, which batches and processes all deposits & withdrawal requests at a common <u>vault period settlement share price</u> to ensure fairness, stability, and eliminates front-running risks. It’s important to note that the number of shares or claimable USDC may differ from initial estimates at the time of deposit or withdrawal requests.<a href="#ref12"><sup>2 </sup></a>
+Perpo OmniVault uses the concept of a vault period, which batches and processes all deposits & withdrawal requests at a common <u>vault period settlement share price</u> to ensure fairness, stability, and eliminates front-running risks. It’s important to note that the number of shares or claimable USDC may differ from initial estimates at the time of deposit or withdrawal requests.<a href="#ref12"><sup>2 </sup></a>
 
 Each Vault Period lasts for 3 hours and runs consecutively:
 
@@ -50,9 +50,9 @@ Example:
 | 11am-2pm     | Using the settlement of share price at 11am, assuming \$1.25 <p/> - LP 1 will receive 40,000 shares (50,000 USDC / \$1.25) for his 50k USDC deposit <p/> - LP 2 will be able to claim 2,500 USDC (2000 * \$1.25) for his 2,000 shares withdrawal request at the end of this vault period |
 
 ## Omnichain Capability
-Orderly OmniVault is omnichain-enabled that allows LP to deposit USDC into the vault from any supported network while interacting with a single unified strategy vault. This differentiates Orderly OmniVault from typical strategy vaults that either support a single blockchain network or manage each supported network separately.<a href="#ref13"><sup>3 </sup></a>
+Perpo OmniVault is omnichain-enabled that allows LP to deposit USDC into the vault from any supported network while interacting with a single unified strategy vault. This differentiates Perpo OmniVault from typical strategy vaults that either support a single blockchain network or manage each supported network separately.<a href="#ref13"><sup>3 </sup></a>
 
-Orderly OmniVault support blockchain networks:
+Perpo OmniVault support blockchain networks:
 
 1. Arbitrum
 
@@ -64,17 +64,17 @@ Like the user experience for staking $ORDER, OmniVault offers omnichain flexibil
 
 ## OmniVault Yields & Strategies
 
-Orderly OmniVault assets are managed by SP to:
+Perpo OmniVault assets are managed by SP to:
 
 1. Execute market making strategies primarily on Orderly’s order book
 
 2. Act as the primary liquidator for selected symbols, taking on liquidated positions.<a href="#ref14"><sup>4 </sup></a>
 
-It is important to note that Orderly OmniVault does not replace the Orderly insurance fund, and not all symbol liquidated positions will be handled on by Orderly OmniVault. Risk management mechanisms are in place to limit the vault’s exposure to liquidated positions.
+It is important to note that Perpo OmniVault does not replace the Perpo insurance fund, and not all symbol liquidated positions will be handled on by Perpo OmniVault. Risk management mechanisms are in place to limit the vault’s exposure to liquidated positions.
 
-Additionally, the Orderly protocol will allocate a portion of its net protocol revenue (up to 40%) and a portion of insurance fund liquidation fees proceeds to Orderly OmniVault. The percentage sharing will be periodically adjusted based on market conditions and OmniVault’s TVL.
+Additionally, the Perpo protocol will allocate a portion of its net protocol revenue (up to 40%) and a portion of insurance fund liquidation fees proceeds to Perpo OmniVault. The percentage sharing will be periodically adjusted based on market conditions and OmniVault’s TVL.
 
-All returns (PnL gains/losses and protocol fees distributions) are compounded in Orderly OmniVault and distributed to all LPs proportionally.
+All returns (PnL gains/losses and protocol fees distributions) are compounded in Perpo OmniVault and distributed to all LPs proportionally.
 
 ## APY Calculation
 
@@ -84,9 +84,9 @@ APY is calculated using a daily time-weighted rate of return (TWRR) approach acr
 
 ---
 
-<a id="ref11"><sup>1 </sup></a>  Shares represent a record of vault participation and do not constitute securities, debt instruments, or any legal ownership in Orderly or its affiliates.
+<a id="ref11"><sup>1 </sup></a>  Shares represent a record of vault participation and do not constitute securities, debt instruments, or any legal ownership in Perpo or its affiliates.
 
-<a id="ref12"><sup>2 </sup></a>  Orderly is not responsible for any slippage, pricing discrepancies, or timing mismatch between user-submitted requests and vault period settlements.
+<a id="ref12"><sup>2 </sup></a>  Perpo is not responsible for any slippage, pricing discrepancies, or timing mismatch between user-submitted requests and vault period settlements.
 
 <a id="ref13"><sup>3 </sup></a>  Omnichain functionality relies on third-party bridging protocols and may be subject to latency, errors, or cross-chain risks beyond Orderly’s control.
 
