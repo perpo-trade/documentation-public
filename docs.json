@@ -186,6 +186,7 @@
               },
               {
                 "group": "General API",
+                "hidden": true,
                 "pages": [
                   {
                     "group": "Builder Info",
