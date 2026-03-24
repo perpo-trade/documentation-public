@@ -49,6 +49,7 @@
               },
               {
                 "group": "$ORDER Tokenomics",
+                "hidden": true,
                 "pages": [
                   "introduction/tokenomics/overview-of-order",
                   "introduction/tokenomics/distribution-and-emission-schedule",
@@ -64,7 +65,7 @@
                 ]
               },
               {
-                "group": "Trade on Orderly",
+                "group": "Trade on Perpo",
                 "pages": [
                   "introduction/trade-on-orderly/trade-on-orderly",
                   "introduction/trade-on-orderly/trading-basics/orderbook-design",
