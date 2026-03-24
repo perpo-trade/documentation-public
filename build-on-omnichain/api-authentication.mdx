@@ -1,23 +1,23 @@
 ---
 title: "API Authentication"
-description: "All requests need to be signed using `orderly-key` and `orderly-secret`."
+description: "All requests need to be signed using `perpo-key` and `perpo-secret`."
 ---
 
 ## Generate Request Signature
 
-Orderly uses the [`ed25519` elliptic curve standard](https://ed25519.cr.yp.to/) for request authentication via signature verification.
+Perpo uses the [`ed25519` elliptic curve standard](https://ed25519.cr.yp.to/) for request authentication via signature verification.
 
 <Steps>
-  <Step title="Orderly Account ID">
+  <Step title="Perpo Account ID">
     Register your account and obtain your account ID. The registration steps are provided [here](/build-on-omnichain/user-flows/accounts).
-    Add your account ID to the request header as `orderly-account-id`.
+    Add your account ID to the request header as `perpo-account-id`.
   </Step>
-  <Step title="Orderly Key">
-    Add your Orderly public key to the request header as `orderly-key`. To generate and add a new Orderly key, see [the documentation](/build-on-omnichain/user-flows/wallet-authentication#orderly-key).
-    You can also obtain Orderly keys from frontend builders like [WOOFi Pro](https://pro.woofi.com).
+  <Step title="Perpo Key">
+    Add your Perpo public key to the request header as `perpo-key`. To generate and add a new Perpo key, see [the documentation](/build-on-omnichain/user-flows/wallet-authentication#perpo-key).
+    You can also obtain Perpo keys from frontend builders like [WOOFi Pro](https://pro.woofi.com).
   </Step>
   <Step title="Timestamp">
-    Take the current timestamp in milliseconds and add it as `orderly-timestamp` to the request header.
+    Take the current timestamp in milliseconds and add it as `perpo-timestamp` to the request header.
   </Step>
   <Step title="Normalize request content">
     Normalize the message to a string by concatenating the following:
@@ -35,7 +35,7 @@ Orderly uses the [`ed25519` elliptic curve standard](https://ed25519.cr.yp.to/) 
 
   </Step>
   <Step title="Generate signature">
-    Sign the normalized content using the `ed25519` algorithm, encode the signature in base64 url-safe format, and add the result to the request header as `orderly-signature`.
+    Sign the normalized content using the `ed25519` algorithm, encode the signature in base64 url-safe format, and add the result to the request header as `perpo-signature`.
   </Step>
   <Step title="Content type">
     Set the `Content-Type` header:
@@ -48,15 +48,15 @@ Orderly uses the [`ed25519` elliptic curve standard](https://ed25519.cr.yp.to/) 
     | Header | Description |
     | --- | --- |
     | `Content-Type` | Request content type |
-    | `orderly-account-id` | Your Orderly account ID |
-    | `orderly-key` | Your Orderly public key |
-    | `orderly-signature` | ed25519 signature (base64url) |
-    | `orderly-timestamp` | Request timestamp (ms) |
+    | `perpo-account-id` | Your Perpo account ID |
+    | `perpo-key` | Your Perpo public key |
+    | `perpo-signature` | ed25519 signature (base64url) |
+    | `perpo-timestamp` | Request timestamp (ms) |
   </Step>
 </Steps>
 
 <Note>
-  The Orderly key should be used without the `ed25519:` prefix when used in code samples below.
+  The Perpo key should be used without the `ed25519:` prefix when used in code samples below.
 </Note>
 
 ### Full Example
@@ -79,8 +79,8 @@ import org.json.JSONObject;
 
 public class AuthenticationExample {
 public static void main(String[] args) throws Exception {
-String baseUrl = "https://testnet-api.orderly.org";
-String orderlyAccountId = "<orderly-account-id>";
+String baseUrl = "https://testnet-api.perpo.trade";
+String orderlyAccountId = "<perpo-account-id>";
 
       Dotenv dotenv = Dotenv.load();
       OkHttpClient client = new OkHttpClient();
@@ -173,10 +173,10 @@ public class Signer {
       return new Request.Builder()
             .url(baseUrl + url)
             .addHeader("Content-Type", "x-www-form-urlencoded")
-            .addHeader("orderly-timestamp", "" + timestamp)
-            .addHeader("orderly-account-id", accountId)
-            .addHeader("orderly-key", Util.encodePublicKey(privateKey))
-            .addHeader("orderly-signature", Base64.getUrlEncoder().encodeToString(orderlySignature))
+            .addHeader("perpo-timestamp", "" + timestamp)
+            .addHeader("perpo-account-id", accountId)
+            .addHeader("perpo-key", Util.encodePublicKey(privateKey))
+            .addHeader("perpo-signature", Base64.getUrlEncoder().encodeToString(orderlySignature))
             .get()
             .build();
    }
@@ -195,10 +195,10 @@ public class Signer {
       return new Request.Builder()
             .url(baseUrl + url)
             .addHeader("Content-Type", "application/json")
-            .addHeader("orderly-timestamp", "" + timestamp)
-            .addHeader("orderly-account-id", accountId)
-            .addHeader("orderly-key", Util.encodePublicKey(privateKey))
-            .addHeader("orderly-signature", Base64.getUrlEncoder().encodeToString(orderlySignature))
+            .addHeader("perpo-timestamp", "" + timestamp)
+            .addHeader("perpo-account-id", accountId)
+            .addHeader("perpo-key", Util.encodePublicKey(privateKey))
+            .addHeader("perpo-signature", Base64.getUrlEncoder().encodeToString(orderlySignature))
             .post(body)
             .build();
    }
@@ -220,8 +220,8 @@ from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
 from signer import Signer
 
-base_url = "https://testnet-api.orderly.org"
-orderly_account_id = "<orderly-account-id>"
+base_url = "https://testnet-api.perpo.trade"
+orderly_account_id = "<perpo-account-id>"
 
 key = b58decode(os.environ.get("ORDERLY_SECRET"))
 orderly_key = Ed25519PrivateKey.from_private_bytes(key)
@@ -283,12 +283,12 @@ class Signer(object):
         ).decode("utf-8")
 
         req.headers = {
-            "orderly-timestamp": str(timestamp),
-            "orderly-account-id": self._account_id,
-            "orderly-key": encode_key(
+            "perpo-timestamp": str(timestamp),
+            "perpo-account-id": self._account_id,
+            "perpo-key": encode_key(
                 self._private_key.public_key().public_bytes_raw()
             ),
-            "orderly-signature": orderly_signature,
+            "perpo-signature": orderly_signature,
         }
         if req.method == "GET" or req.method == "DELETE":
             req.headers["Content-Type"] = "application/x-www-form-urlencoded"
@@ -319,8 +319,8 @@ if (!globalThis.crypto) globalThis.crypto = webcrypto as any;
 config();
 
 async function main() {
-  const baseUrl = 'https://testnet-api.orderly.org';
-  const orderlyAccountId = '<orderly-account-id>';
+  const baseUrl = 'https://testnet-api.perpo.trade';
+  const orderlyAccountId = '<perpo-account-id>';
 
   const orderlyKey = bs58.decode(process.env.ORDERLY_SECRET!);
 
@@ -366,10 +366,10 @@ export async function signAndSendRequest(
         init?.method !== 'GET' && init?.method !== 'DELETE'
           ? 'application/json'
           : 'application/x-www-form-urlencoded',
-      'orderly-timestamp': String(timestamp),
-      'orderly-account-id': orderlyAccountId,
-      'orderly-key': `ed25519:${encodeBase58(await getPublicKeyAsync(privateKey))}`,
-      'orderly-signature': Buffer.from(orderlySignature).toString('base64url'),
+      'perpo-timestamp': String(timestamp),
+      'perpo-account-id': orderlyAccountId,
+      'perpo-key': `ed25519:${encodeBase58(await getPublicKeyAsync(privateKey))}`,
+      'perpo-signature': Buffer.from(orderlySignature).toString('base64url'),
       ...(init?.headers ?? {})
     },
     ...(init ?? {})
@@ -383,12 +383,12 @@ export async function signAndSendRequest(
   <Tab title="Shell">
 ```shell cURL
 curl --request POST \
-  --url https://api.orderly.org/v1/order \
+  --url https://api.perpo.trade/v1/order \
   --header 'Content-Type: application/json' \
-  --header 'orderly-account-id: <orderly-account-id>' \
-  --header 'orderly-key: ed25519:8tm7dnKYkSc3FzgPuJaw1wztr79eeZpN35nHW5pL5XhX' \
-  --header 'orderly-signature: dG4bkKiqG0dUYLzViRZkvbI6Sy239JxAdNMIBxFZ4w030Jofr0ORV06GHtvXZkaZaWUXE+XAU3fnzKN/5fDeBQ==' \
-  --header 'orderly-timestamp: 1649920583000' \
+  --header 'perpo-account-id: <perpo-account-id>' \
+  --header 'perpo-key: ed25519:8tm7dnKYkSc3FzgPuJaw1wztr79eeZpN35nHW5pL5XhX' \
+  --header 'perpo-signature: dG4bkKiqG0dUYLzViRZkvbI6Sy239JxAdNMIBxFZ4w030Jofr0ORV06GHtvXZkaZaWUXE+XAU3fnzKN/5fDeBQ==' \
+  --header 'perpo-timestamp: 1649920583000' \
   --data '{
   "symbol": "<symbol>",
   "order_type": "<order_type>",
@@ -401,16 +401,16 @@ curl --request POST \
 
 ## Security
 
-Orderly validates every request through three checks. A request must pass all three to be accepted.
+Perpo validates every request through three checks. A request must pass all three to be accepted.
 
 ### Request Timestamp
 
-The request is rejected if the `orderly-timestamp` header differs from the API server time by more than 300 seconds.
+The request is rejected if the `perpo-timestamp` header differs from the API server time by more than 300 seconds.
 
 ### Signature Verification
 
-The `orderly-signature` header must be a valid ed25519 signature generated from the normalized request content and signed with your Orderly secret key.
+The `perpo-signature` header must be a valid ed25519 signature generated from the normalized request content and signed with your Perpo secret key.
 
-### Orderly Key Validity
+### Perpo Key Validity
 
-The `orderly-key` header must reference a key that has been added to the network, is associated with the account, and has not expired.
+The `perpo-key` header must reference a key that has been added to the network, is associated with the account, and has not expired.

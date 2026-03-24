@@ -1,9 +1,9 @@
 ---
 title: "Introduction"
-description: "Orderly API overview covering REST and WebSocket endpoints, authentication, and request conventions."
+description: "Perpo API overview covering REST and WebSocket endpoints, authentication, and request conventions."
 ---
 
-Orderly provides two interfaces for client communication:
+Perpo provides two interfaces for client communication:
 
 - [**RESTful API**](#restful-api): For actions such as creating/canceling orders, fetching balances, and managing accounts.
 - [**WebSocket API**](#websocket-api): For real-time orderbook data feeds and order update feeds.
@@ -12,8 +12,8 @@ Orderly provides two interfaces for client communication:
 
 | Environment | URL |
 | --- | --- |
-| **Mainnet** | `https://api.orderly.org/` |
-| **Testnet** | `https://testnet-api.orderly.org` |
+| **Mainnet** | `https://api.perpo.trade/` |
+| **Testnet** | `https://testnet-api.perpo.trade` |
 
 ## REST Request Conventions
 
@@ -23,15 +23,15 @@ Orderly provides two interfaces for client communication:
 
 ## Authorization
 
-All private endpoints require signing via cryptographically secure keys (Orderly key). Set the corresponding headers in your request — see [API Authentication](/build-on-omnichain/api-authentication) for details.
+All private endpoints require signing via cryptographically secure keys (Perpo key). Set the corresponding headers in your request — see [API Authentication](/build-on-omnichain/api-authentication) for details.
 
 ## Symbol Format
 
-Orderly uses the format `PERP_<SYMBOL>_USDC` for symbol names, e.g. `PERP_ETH_USDC`.
+Perpo uses the format `PERP_<SYMBOL>_USDC` for symbol names, e.g. `PERP_ETH_USDC`.
 
 ## Rate Limit
 
-Rate limits are counted per Orderly key. If your application exceeds the rate limit for an endpoint, the server will return HTTP `429`. Wait until the next time window before retrying.
+Rate limits are counted per Perpo key. If your application exceeds the rate limit for an endpoint, the server will return HTTP `429`. Wait until the next time window before retrying.
 
 ## Error Message
 

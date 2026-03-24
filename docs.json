@@ -138,10 +138,11 @@
             ]
           },
           {
-            "tab": "Build on Omnichain",
+            "tab": "Build on Omnichain (API)",
             "groups": [
               {
                 "group": "Getting Started",
+                "hidden": true,
                 "pages": [
                   "build-on-omnichain/building-on-omnichain",
                   "build-on-omnichain/overview",
@@ -151,6 +152,7 @@
               },
               {
                 "group": "Partner Onboarding & Support",
+                "hidden": true,
                 "pages": [
                   "build-on-omnichain/partner-support",
                   "build-on-omnichain/affiliate-onboarding",
@@ -159,6 +161,7 @@
               },
               {
                 "group": "Implementation Flows",
+                "hidden": true,
                 "pages": [
                   "build-on-omnichain/user-flows/accounts",
                   "build-on-omnichain/user-flows/wallet-authentication",
