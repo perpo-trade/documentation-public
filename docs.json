@@ -554,6 +554,7 @@
               },
               {
                 "group": "Websocket API",
+                "hidden": true,
                 "pages": [
                   "build-on-omnichain/websocket-api/introduction",
                   "build-on-omnichain/websocket-api/ping-pong",
