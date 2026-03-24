@@ -399,7 +399,7 @@ paths:
           in: query
           description: "return all if no filter. can filter multiple broker_id per query"
           required: false
-          example: "orderly,woofi_pro,aden"
+          example: "perpo,woofi_pro,aden"
           schema:
             type: string
       responses:
@@ -979,7 +979,7 @@ components:
                   example: 1.500000
                 broker_id:
                   type: string
-                  example: "orderly"
+                  example: "perpo"
                 current_period_number:
                   type: number
                   example: 4
@@ -1082,7 +1082,7 @@ components:
                       - created_time: 1734480000000
                         period_number: 1
                         type: "deposit"
-                        source: "WOOFi Pro"
+                        source: "Perpo Pro"
                         status: "available"
                         est_assign_period_time: null
                         unlock_time: null
@@ -1259,7 +1259,7 @@ components:
                         example: "protocol"
                       vault_name:
                         type: string
-                        example: "Orderly OmniVault"
+                        example: "Perpo OmniVault"
                       description:
                         type: string
                         example: "Earn passive yields effortlessly, no trading expertise required. Deposit..."
@@ -1351,7 +1351,7 @@ components:
                         example: false
                       broker_id:
                         type: string
-                        example: "orderly"
+                        example: "perpo"
     VaultPerformanceResponse:
       allOf:
         - $ref: "#/components/schemas/BasicResponse"
@@ -1417,7 +1417,7 @@ components:
                     properties:
                       exchange:
                         type: string
-                        example: "orderly"
+                        example: "perpo"
                       symbol:
                         type: string
                         example: "PERP_BTC_USDC"
@@ -1621,7 +1621,7 @@ components:
                     properties:
                       exchange:
                         type: string
-                        example: "orderly"
+                        example: "perpo"
                       order_id:
                         type: number
                         example: 78151
@@ -1696,7 +1696,7 @@ components:
                     properties:
                       exchange:
                         type: string
-                        example: "orderly"
+                        example: "perpo"
                       id:
                         type: number
                         example: 2
@@ -2037,7 +2037,7 @@ components:
                       - created_time: 1734480000000
                         period_number: 1
                         type: "deposit"
-                        source: "WOOFi Pro"
+                        source: "Perpo Pro"
                         status: "available"
                         est_assign_period_time: null
                         unlock_time: null
@@ -2060,7 +2060,7 @@ components:
                   type: number
                   example: 10087.260000
 servers:
-  - url: https://api-sv.orderly.org
+  - url: https://api-sv.perpo.trade
     description: Mainnet
-  - url: https://testnet-api-sv.orderly.org
+  - url: https://testnet-api-sv.perpo.trade
     description: Testnet

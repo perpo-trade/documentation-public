@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Orderly",
+  "name": "Perpo",
   "colors": {
     "primary": "#aa5cf8",
     "light": "#BE7CFF",
@@ -42,7 +42,7 @@
               {
                 "group": "Getting Started",
                 "pages": [
-                  "introduction/getting-started/what-is-orderly",
+                  "introduction/getting-started/what-is-perpo",
                   "introduction/getting-started/roadmap",
                   "introduction/getting-started/broker-onboarding"
                 ]
@@ -67,62 +67,62 @@
               {
                 "group": "Trade on Perpo",
                 "pages": [
-                  "introduction/trade-on-orderly/trade-on-orderly",
-                  "introduction/trade-on-orderly/trading-basics/orderbook-design",
+                  "introduction/trade-on-perpo/trade-on-perpo",
+                  "introduction/trade-on-perpo/trading-basics/orderbook-design",
                   {
                     "group": "Trading Basics",
                     "pages": [
-                      "introduction/trade-on-orderly/trading-basics/glossary",
-                      "introduction/trade-on-orderly/trading-basics/perpetual-futures",
-                      "introduction/trade-on-orderly/trading-basics/accounts",
-                      "introduction/trade-on-orderly/trading-basics/order-types",
-                      "introduction/trade-on-orderly/trading-basics/trading-fees"
+                      "introduction/trade-on-perpo/trading-basics/glossary",
+                      "introduction/trade-on-perpo/trading-basics/perpetual-futures",
+                      "introduction/trade-on-perpo/trading-basics/accounts",
+                      "introduction/trade-on-perpo/trading-basics/order-types",
+                      "introduction/trade-on-perpo/trading-basics/trading-fees"
                     ]
                   },
                   {
                     "group": "Perpetual Futures Basics",
                     "pages": [
-                      "introduction/trade-on-orderly/perpetual-futures/formulas-definitions",
-                      "introduction/trade-on-orderly/perpetual-futures/margin-leverage-and-pnl",
-                      "introduction/trade-on-orderly/perpetual-futures/isolated-margin",
-                      "introduction/trade-on-orderly/perpetual-futures/mark-price-index-price-and-last-price",
-                      "introduction/trade-on-orderly/perpetual-futures/orders-price-limits",
-                      "introduction/trade-on-orderly/perpetual-futures/funding-rate",
-                      "introduction/trade-on-orderly/perpetual-futures/liquidations",
-                      "introduction/trade-on-orderly/perpetual-futures/insurance-fund-and-adl"
+                      "introduction/trade-on-perpo/perpetual-futures/formulas-definitions",
+                      "introduction/trade-on-perpo/perpetual-futures/margin-leverage-and-pnl",
+                      "introduction/trade-on-perpo/perpetual-futures/isolated-margin",
+                      "introduction/trade-on-perpo/perpetual-futures/mark-price-index-price-and-last-price",
+                      "introduction/trade-on-perpo/perpetual-futures/orders-price-limits",
+                      "introduction/trade-on-perpo/perpetual-futures/funding-rate",
+                      "introduction/trade-on-perpo/perpetual-futures/liquidations",
+                      "introduction/trade-on-perpo/perpetual-futures/insurance-fund-and-adl"
                     ]
                   },
-                  "introduction/trade-on-orderly/supported-markets",
-                  "introduction/trade-on-orderly/supported-chains",
-                  "introduction/trade-on-orderly/multi-collateral",
-                  "introduction/trade-on-orderly/builders"
+                  "introduction/trade-on-perpo/supported-markets",
+                  "introduction/trade-on-perpo/supported-chains",
+                  "introduction/trade-on-perpo/multi-collateral",
+                  "introduction/trade-on-perpo/builders"
                 ]
               },
               {
                 "group": "DEX's Affiliate Program",
                 "hidden": true,
                 "pages": [
-                  "introduction/be-a-broker/orderly-dex-affiliate-program-affiliates-quick-guide",
-                  "introduction/be-a-broker/orderly-dex-affiliate-program-brokers-quick-guide",
+                  "introduction/be-a-broker/perpo-dex-affiliate-program-affiliates-quick-guide",
+                  "introduction/be-a-broker/perpo-dex-affiliate-program-brokers-quick-guide",
                   "introduction/be-a-broker/affiliate-referral-program"
                 ]
               },
               {
-                "group": "Orderly OmniVault",
+                "group": "Perpo OmniVault",
                 "pages": [
-                  "introduction/orderly-omniVault/overview",
-                  "introduction/orderly-omniVault/mechanics",
-                  "introduction/orderly-omniVault/liquidity-provider",
-                  "introduction/orderly-omniVault/faq"
+                  "introduction/perpo-omniVault/overview",
+                  "introduction/perpo-omniVault/mechanics",
+                  "introduction/perpo-omniVault/liquidity-provider",
+                  "introduction/perpo-omniVault/faq"
                 ]
               },
               {
-                "group": "Orderly One",
+                "group": "Perpo One",
                 "hidden": true,
                 "pages": [
-                  "introduction/orderly-one/builder-guidelines",
-                  "introduction/orderly-one/supplemental-terms-for-dexes",
-                  "introduction/orderly-one/vanguard-distributor-program"
+                  "introduction/perpo-one/builder-guidelines",
+                  "introduction/perpo-one/supplemental-terms-for-dexes",
+                  "introduction/perpo-one/vanguard-distributor-program"
                 ]
               },
               {
@@ -233,13 +233,13 @@
                   {
                     "group": "Key Management",
                     "pages": [
-                      "build-on-omnichain/restful-api/public/get-orderly-key",
-                      "build-on-omnichain/restful-api/public/add-orderly-key",
-                      "build-on-omnichain/restful-api/private/remove-orderly-key",
-                      "build-on-omnichain/restful-api/private/get-current-orderly-key-info",
-                      "build-on-omnichain/restful-api/private/get-orderly-key-ip-restriction",
-                      "build-on-omnichain/restful-api/private/set-orderly-key-ip-restriction",
-                      "build-on-omnichain/restful-api/private/reset-orderly-key-ip-restriction"
+                      "build-on-omnichain/restful-api/public/get-perpo-key",
+                      "build-on-omnichain/restful-api/public/add-perpo-key",
+                      "build-on-omnichain/restful-api/private/remove-perpo-key",
+                      "build-on-omnichain/restful-api/private/get-current-perpo-key-info",
+                      "build-on-omnichain/restful-api/private/get-perpo-key-ip-restriction",
+                      "build-on-omnichain/restful-api/private/set-perpo-key-ip-restriction",
+                      "build-on-omnichain/restful-api/private/reset-perpo-key-ip-restriction"
                     ]
                   },
                   {
@@ -280,7 +280,7 @@
                     "group": "Delegate Signer",
                     "pages": [
                       "build-on-omnichain/restful-api/public/delegate-signer",
-                      "build-on-omnichain/restful-api/public/add-delegate-signer-orderly-key",
+                      "build-on-omnichain/restful-api/public/add-delegate-signer-perpo-key",
                       "build-on-omnichain/restful-api/private/delegate-signer-settle-pnl",
                       "build-on-omnichain/restful-api/private/delegate-signer-withdraw-request"
                     ]
@@ -1004,7 +1004,7 @@
                   {
                     "group": "Key management",
                     "pages": [
-                      "strategy-vault/strategy-provider/private/add-sp-orderly-key"
+                      "strategy-vault/strategy-provider/private/add-sp-perpo-key"
                     ]
                   },
                   {
@@ -1061,7 +1061,7 @@
                       "strategy-vault/strategy-fund/public/get-preview-users-pending-requests",
                       "strategy-vault/strategy-fund/public/get-fund-inflow-allocation",
                       "strategy-vault/strategy-fund/public/get-fund-outflow-allocation",
-                      "strategy-vault/strategy-fund/public/get-orderly-protocol-revenue-sharing-history",
+                      "strategy-vault/strategy-fund/public/get-perpo-protocol-revenue-sharing-history",
                       "strategy-vault/strategy-fund/public/get-liquidation-fees-sharing-history",
                       "strategy-vault/strategy-fund/public/get-internal-transfer-history"
                     ]
@@ -1123,7 +1123,7 @@
   },
   "api": {
     "openapi": [
-      "orderly.openapi.yaml",
+      "perpo.openapi.yaml",
       "sv.openapi.yaml"
     ]
   },
@@ -1144,7 +1144,7 @@
   "footer": {
     "socials": {
       "twitter": "https://twitter.com/OrderlyNetwork",
-      "linkedin": "https://www.linkedin.com/company/orderly-network/",
+      "linkedin": "https://www.linkedin.com/company/perpo-network/",
       "discord": "https://discord.gg/orderlynetwork",
       "medium": "https://medium.com/@orderlynetwork"
     }
@@ -1187,8 +1187,8 @@
       "destination": "/build-on-omnichain/restful-api/client/get-user-statistics"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/private/add-sp-orderly-key",
-      "destination": "/build-on-omnichain/restful-api/private/add-sp-orderly-key"
+      "source": "/build-on-omnichain/evm-api/restful-api/private/add-sp-perpo-key",
+      "destination": "/build-on-omnichain/restful-api/private/add-sp-perpo-key"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/private/add-sub-account",
@@ -1407,8 +1407,8 @@
       "destination": "/build-on-omnichain/restful-api/private/get-current-holding"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/private/get-current-orderly-key-info",
-      "destination": "/build-on-omnichain/restful-api/private/get-current-orderly-key-info"
+      "source": "/build-on-omnichain/evm-api/restful-api/private/get-current-perpo-key-info",
+      "destination": "/build-on-omnichain/restful-api/private/get-current-perpo-key-info"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/private/get-default-builder-fee",
@@ -1463,8 +1463,8 @@
       "destination": "/build-on-omnichain/restful-api/private/get-order-by-order_id"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/private/get-orderly-key-ip-restriction",
-      "destination": "/build-on-omnichain/restful-api/private/get-orderly-key-ip-restriction"
+      "source": "/build-on-omnichain/evm-api/restful-api/private/get-perpo-key-ip-restriction",
+      "destination": "/build-on-omnichain/restful-api/private/get-perpo-key-ip-restriction"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/private/get-orders",
@@ -1579,8 +1579,8 @@
       "destination": "/build-on-omnichain/restful-api/private/orderbook-snapshot"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/private/remove-orderly-key",
-      "destination": "/build-on-omnichain/restful-api/private/remove-orderly-key"
+      "source": "/build-on-omnichain/evm-api/restful-api/private/remove-perpo-key",
+      "destination": "/build-on-omnichain/restful-api/private/remove-perpo-key"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/private/request-pnl-settlement",
@@ -1591,8 +1591,8 @@
       "destination": "/build-on-omnichain/restful-api/private/request-sp-pnl-settlement"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/private/reset-orderly-key-ip-restriction",
-      "destination": "/build-on-omnichain/restful-api/private/reset-orderly-key-ip-restriction"
+      "source": "/build-on-omnichain/evm-api/restful-api/private/reset-perpo-key-ip-restriction",
+      "destination": "/build-on-omnichain/restful-api/private/reset-perpo-key-ip-restriction"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/private/reset-user-fee-rate",
@@ -1603,8 +1603,8 @@
       "destination": "/build-on-omnichain/restful-api/private/set-maintenance-config"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/private/set-orderly-key-ip-restriction",
-      "destination": "/build-on-omnichain/restful-api/private/set-orderly-key-ip-restriction"
+      "source": "/build-on-omnichain/evm-api/restful-api/private/set-perpo-key-ip-restriction",
+      "destination": "/build-on-omnichain/restful-api/private/set-perpo-key-ip-restriction"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/private/set-read-status-of-all-notifications",
@@ -1647,12 +1647,12 @@
       "destination": "/build-on-omnichain/restful-api/private/update-user-fee-rate"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/public/add-delegate-signer-orderly-key",
-      "destination": "/build-on-omnichain/restful-api/public/add-delegate-signer-orderly-key"
+      "source": "/build-on-omnichain/evm-api/restful-api/public/add-delegate-signer-perpo-key",
+      "destination": "/build-on-omnichain/restful-api/public/add-delegate-signer-perpo-key"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/public/add-orderly-key",
-      "destination": "/build-on-omnichain/restful-api/public/add-orderly-key"
+      "source": "/build-on-omnichain/evm-api/restful-api/public/add-perpo-key",
+      "destination": "/build-on-omnichain/restful-api/public/add-perpo-key"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/public/check-account-details-of-an-address",
@@ -1847,12 +1847,12 @@
       "destination": "/build-on-omnichain/restful-api/public/get-order-rules-per-symbol"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/public/get-orderly-key",
-      "destination": "/build-on-omnichain/restful-api/public/get-orderly-key"
+      "source": "/build-on-omnichain/evm-api/restful-api/public/get-perpo-key",
+      "destination": "/build-on-omnichain/restful-api/public/get-perpo-key"
     },
     {
-      "source": "/build-on-omnichain/evm-api/restful-api/public/get-orderly-protocol-revenue-sharing-history",
-      "destination": "/build-on-omnichain/restful-api/public/get-orderly-protocol-revenue-sharing-history"
+      "source": "/build-on-omnichain/evm-api/restful-api/public/get-perpo-protocol-revenue-sharing-history",
+      "destination": "/build-on-omnichain/restful-api/public/get-perpo-protocol-revenue-sharing-history"
     },
     {
       "source": "/build-on-omnichain/evm-api/restful-api/public/get-parameters-of-each-epoch",
