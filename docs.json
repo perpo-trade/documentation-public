@@ -376,6 +376,7 @@
               },
               {
                 "group": "Strategy Vault API",
+                "hidden": true,
                 "pages": [
                   {
                     "group": "Account",
@@ -389,6 +390,7 @@
               },
               {
                 "group": "Staking & Valor API",
+                "hidden": true,
                 "pages": [
                   {
                     "group": "Staking",
@@ -415,6 +417,7 @@
               },
               {
                 "group": "Builder API",
+                "hidden": true,
                 "pages": [
                   {
                     "group": "User Data",
@@ -487,6 +490,7 @@
               },
               {
                 "group": "Points Module",
+                "hidden": true,
                 "pages": [
                   {
                     "group": "Public API",
