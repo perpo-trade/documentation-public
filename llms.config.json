@@ -1,11 +1,11 @@
 {
   "site": {
-    "name": "Orderly Network",
-    "baseUrl": "https://orderly.network/docs",
-    "description": "Orderly is an omnichain orderbook-based trading infrastructure providing perpetual futures liquidity for decentralized exchanges.",
+    "name": "Perpo Network",
+    "baseUrl": "https://perpo.trade/docs",
+    "description": "Perpo is an omnichain orderbook-based trading infrastructure providing perpetual futures liquidity for decentralized exchanges.",
     "apiBase": {
-      "mainnet": "https://api.orderly.org/",
-      "testnet": "https://testnet-api.orderly.org"
+      "mainnet": "https://api.perpo.trade/",
+      "testnet": "https://testnet-api.perpo.trade"
     },
     "auth": "Authentication uses ed25519 signatures. Symbol format: PERP_<TOKEN>_USDC."
   },
@@ -13,7 +13,7 @@
     {
       "title": "Getting Started",
       "routes": [
-        "introduction/getting-started/what-is-orderly",
+        "introduction/getting-started/what-is-perpo",
         "build-on-omnichain/building-on-omnichain",
         "build-on-omnichain/integration-checklist"
       ]
@@ -45,7 +45,7 @@
       "title": "Isolated Margin",
       "routes": [
         "build-on-omnichain/user-flows/isolated-margin",
-        "introduction/trade-on-orderly/perpetual-futures/isolated-margin",
+        "introduction/trade-on-perpo/perpetual-futures/isolated-margin",
         "build-on-omnichain/restful-api/private/update-margin-mode",
         "build-on-omnichain/restful-api/private/get-margin-modes",
         "build-on-omnichain/restful-api/private/add-reduce-position-margin"
@@ -86,7 +86,7 @@
     {
       "title": "Chains & Contracts",
       "routes": [
-        "introduction/trade-on-orderly/supported-chains",
+        "introduction/trade-on-perpo/supported-chains",
         "build-on-omnichain/addresses"
       ]
     },
@@ -101,7 +101,7 @@
   ],
   "canonicalPages": [
     "home",
-    "introduction/getting-started/what-is-orderly",
+    "introduction/getting-started/what-is-perpo",
     "build-on-omnichain/building-on-omnichain",
     "build-on-omnichain/integration-checklist",
     "build-on-omnichain/user-flows/accounts",
@@ -113,7 +113,7 @@
     "build-on-omnichain/restful-api/private/update-margin-mode",
     "build-on-omnichain/restful-api/private/get-margin-modes",
     "build-on-omnichain/restful-api/private/add-reduce-position-margin",
-    "introduction/trade-on-orderly/perpetual-futures/isolated-margin",
+    "introduction/trade-on-perpo/perpetual-futures/isolated-margin",
     "build-on-omnichain/user-flows/internal-transfer",
     "build-on-omnichain/user-flows/settle-pnl",
     "sdks/overview",
@@ -125,7 +125,7 @@
     "build-on-omnichain/websocket-api/private/execution-report",
     "build-on-omnichain/introduction",
     "build-on-omnichain/error-codes",
-    "introduction/trade-on-orderly/supported-chains",
+    "introduction/trade-on-perpo/supported-chains",
     "build-on-omnichain/addresses",
     "troubleshooting/introduction",
     "troubleshooting/user-issues/transaction-failures",
