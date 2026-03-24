@@ -1073,6 +1073,7 @@
           },
           {
             "tab": "Troubleshooting",
+            "hidden": true,
             "groups": [
               {
                 "group": "Introduction",
@@ -1094,6 +1095,7 @@
           },
           {
             "tab": "Release Notes",
+            "hidden": true,
             "groups": [
               {
                 "group": "Updates by area",
