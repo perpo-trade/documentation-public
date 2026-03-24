@@ -1,71 +1,71 @@
-# Orderly Network
+# Perpo Network
 
-> Orderly is an omnichain orderbook-based trading infrastructure providing perpetual futures liquidity for decentralized exchanges.
+> Perpo is an omnichain orderbook-based trading infrastructure providing perpetual futures liquidity for decentralized exchanges.
 
-API Base: `https://api.orderly.org/` (Mainnet), `https://testnet-api.orderly.org` (Testnet). Authentication uses ed25519 signatures. Symbol format: PERP_<TOKEN>_USDC.
+API Base: `https://api.perpo.trade/` (Mainnet), `https://testnet-api.perpo.trade` (Testnet). Authentication uses ed25519 signatures. Symbol format: PERP_<TOKEN>_USDC.
 
 ## Getting Started
 
-- [What is Orderly?](https://orderly.network/docs/introduction/getting-started/what-is-orderly): What Orderly is, who it is for, and how partners build on it.
-- [Building on Orderly](https://orderly.network/docs/build-on-omnichain/building-on-omnichain): Start building your dApp on Orderly's omnichain trading infrastructure.
-- [Integration Checklist](https://orderly.network/docs/build-on-omnichain/integration-checklist): A structured guide for builders integrating with Orderly Network.
+- [What is Perpo?](https://perpo.trade/docs/introduction/getting-started/what-is-perpo): What Perpo is, who it is for, and how partners build on it.
+- [Building on Perpo](https://perpo.trade/docs/build-on-omnichain/building-on-omnichain): Start building your dApp on Perpo's omnichain trading infrastructure.
+- [Integration Checklist](https://perpo.trade/docs/build-on-omnichain/integration-checklist): A structured guide for builders integrating with Perpo Network.
 
 ## Authentication
 
-- [API Authentication](https://orderly.network/docs/build-on-omnichain/api-authentication): All requests need to be signed using `orderly-key` and `orderly-secret`.
-- [Wallet Authentication](https://orderly.network/docs/build-on-omnichain/user-flows/wallet-authentication): Overview of wallet authentication & Orderly keys
+- [API Authentication](https://perpo.trade/docs/build-on-omnichain/api-authentication): All requests need to be signed using `perpo-key` and `perpo-secret`.
+- [Wallet Authentication](https://perpo.trade/docs/build-on-omnichain/user-flows/wallet-authentication): Overview of wallet authentication & Perpo keys
 
 ## Accounts and Funding
 
-- [Accounts](https://orderly.network/docs/build-on-omnichain/user-flows/accounts): Overview of account structure
-- [Deposit/Withdrawal](https://orderly.network/docs/build-on-omnichain/user-flows/withdrawal-deposit): Overview of deposit and withdrawal flow
+- [Accounts](https://perpo.trade/docs/build-on-omnichain/user-flows/accounts): Overview of account structure
+- [Deposit/Withdrawal](https://perpo.trade/docs/build-on-omnichain/user-flows/withdrawal-deposit): Overview of deposit and withdrawal flow
 
 ## Order Lifecycle
 
-- [Order Management](https://orderly.network/docs/build-on-omnichain/user-flows/order-management): How orders flow through Orderly's architecture, from placement to execution and settlement.
-- [Create Order](https://orderly.network/docs/build-on-omnichain/restful-api/private/create-order): Create Order
-- [Cancel Order](https://orderly.network/docs/build-on-omnichain/restful-api/private/cancel-order): Cancel Order
-- [Get Orders](https://orderly.network/docs/build-on-omnichain/restful-api/private/get-orders): Get Orders
+- [Order Management](https://perpo.trade/docs/build-on-omnichain/user-flows/order-management): How orders flow through Perpo's architecture, from placement to execution and settlement.
+- [Create Order](https://perpo.trade/docs/build-on-omnichain/restful-api/private/create-order): Create Order
+- [Cancel Order](https://perpo.trade/docs/build-on-omnichain/restful-api/private/cancel-order): Cancel Order
+- [Get Orders](https://perpo.trade/docs/build-on-omnichain/restful-api/private/get-orders): Get Orders
 
 ## Isolated Margin
 
-- [Isolated Margin](https://orderly.network/docs/build-on-omnichain/user-flows/isolated-margin): Step-by-step guide to integrating Isolated Margin: switching margin modes, setting leverage, placing orders, and adjusting position margin.
-- [Isolated Margin](https://orderly.network/docs/introduction/trade-on-orderly/perpetual-futures/isolated-margin): How Isolated Margin mode works on Orderly, including per-position margin allocation, independent leverage, and risk isolation.
-- [Update Margin Mode](https://orderly.network/docs/build-on-omnichain/restful-api/private/update-margin-mode): Update Margin Mode
-- [Get Margin Modes](https://orderly.network/docs/build-on-omnichain/restful-api/private/get-margin-modes): Get Margin Modes
-- [Add Reduce Position Margin](https://orderly.network/docs/build-on-omnichain/restful-api/private/add-reduce-position-margin): Add or Reduce Position Margin
+- [Isolated Margin](https://perpo.trade/docs/build-on-omnichain/user-flows/isolated-margin): Step-by-step guide to integrating Isolated Margin: switching margin modes, setting leverage, placing orders, and adjusting position margin.
+- [Isolated Margin](https://perpo.trade/docs/introduction/trade-on-perpo/perpetual-futures/isolated-margin): How Isolated Margin mode works on Perpo, including per-position margin allocation, independent leverage, and risk isolation.
+- [Update Margin Mode](https://perpo.trade/docs/build-on-omnichain/restful-api/private/update-margin-mode): Update Margin Mode
+- [Get Margin Modes](https://perpo.trade/docs/build-on-omnichain/restful-api/private/get-margin-modes): Get Margin Modes
+- [Add Reduce Position Margin](https://perpo.trade/docs/build-on-omnichain/restful-api/private/add-reduce-position-margin): Add or Reduce Position Margin
 
 ## Transfers and Settlement
 
-- [Internal Transfer](https://orderly.network/docs/build-on-omnichain/user-flows/internal-transfer): Overview of internal transfer flow
-- [Settle PnL](https://orderly.network/docs/build-on-omnichain/user-flows/settle-pnl): How to settle realized and unrealized PnL into USDC balance via the Orderly API.
-- [Create Internal Transfer](https://orderly.network/docs/build-on-omnichain/restful-api/private/create-internal-transfer): Create Internal Transfer
+- [Internal Transfer](https://perpo.trade/docs/build-on-omnichain/user-flows/internal-transfer): Overview of internal transfer flow
+- [Settle PnL](https://perpo.trade/docs/build-on-omnichain/user-flows/settle-pnl): How to settle realized and unrealized PnL into USDC balance via the Perpo API.
+- [Create Internal Transfer](https://perpo.trade/docs/build-on-omnichain/restful-api/private/create-internal-transfer): Create Internal Transfer
 
 ## SDK Setup
 
-- [List of SDKs](https://orderly.network/docs/sdks/overview): Comparison of Orderly SDKs (React components, hooks, core, perp) to help choose the right starting point.
-- [Getting started](https://orderly.network/docs/sdks/react/getting_started): Step-by-step guide to install the Orderly React SDK, configure providers, and build trading pages.
-- [Setup](https://orderly.network/docs/sdks/hooks/setup): How to install, configure, and connect wallet adapters with the Orderly React hooks SDK.
+- [List of SDKs](https://perpo.trade/docs/sdks/overview): Comparison of Perpo SDKs (React components, hooks, core, perp) to help choose the right starting point.
+- [Getting started](https://perpo.trade/docs/sdks/react/getting_started): Step-by-step guide to install the Perpo React SDK, configure providers, and build trading pages.
+- [Setup](https://perpo.trade/docs/sdks/hooks/setup): How to install, configure, and connect wallet adapters with the Perpo React hooks SDK.
 
 ## WebSocket & Real-Time Data
 
-- [Websocket API](https://orderly.network/docs/build-on-omnichain/websocket-api/introduction): WebSocket API base endpoints, available public and private topics, and subscription/unsubscription format.
-- [Orderbook](https://orderly.network/docs/build-on-omnichain/websocket-api/public/orderbook): Subscribe to full depth-100 orderbook snapshots for a symbol via WebSocket, pushed every second.
-- [Trade](https://orderly.network/docs/build-on-omnichain/websocket-api/public/trade): Subscribe to real-time trade execution events for a symbol via WebSocket.
-- [Execution Report](https://orderly.network/docs/build-on-omnichain/websocket-api/private/execution-report): Subscribe to order execution reports, optionally filtered by symbol, via private WebSocket stream.
+- [Websocket API](https://perpo.trade/docs/build-on-omnichain/websocket-api/introduction): WebSocket API base endpoints, available public and private topics, and subscription/unsubscription format.
+- [Orderbook](https://perpo.trade/docs/build-on-omnichain/websocket-api/public/orderbook): Subscribe to full depth-100 orderbook snapshots for a symbol via WebSocket, pushed every second.
+- [Trade](https://perpo.trade/docs/build-on-omnichain/websocket-api/public/trade): Subscribe to real-time trade execution events for a symbol via WebSocket.
+- [Execution Report](https://perpo.trade/docs/build-on-omnichain/websocket-api/private/execution-report): Subscribe to order execution reports, optionally filtered by symbol, via private WebSocket stream.
 
 ## API Reference
 
-- [Introduction](https://orderly.network/docs/build-on-omnichain/introduction): Orderly API overview covering REST and WebSocket endpoints, authentication, and request conventions.
-- [Error Codes](https://orderly.network/docs/build-on-omnichain/error-codes): Complete list of Orderly API error codes with HTTP status codes and descriptions.
+- [Introduction](https://perpo.trade/docs/build-on-omnichain/introduction): Perpo API overview covering REST and WebSocket endpoints, authentication, and request conventions.
+- [Error Codes](https://perpo.trade/docs/build-on-omnichain/error-codes): Complete list of Perpo API error codes with HTTP status codes and descriptions.
 
 ## Chains & Contracts
 
-- [Supported Chains](https://orderly.network/docs/introduction/trade-on-orderly/supported-chains): A list of supported chains
-- [Smart Contract Addresses](https://orderly.network/docs/build-on-omnichain/addresses): Smart contract addresses for Orderly vault, USDC, and Verifier on each supported chain (mainnet and testnet).
+- [Supported Chains](https://perpo.trade/docs/introduction/trade-on-perpo/supported-chains): A list of supported chains
+- [Smart Contract Addresses](https://perpo.trade/docs/build-on-omnichain/addresses): Smart contract addresses for Perpo vault, USDC, and Verifier on each supported chain (mainnet and testnet).
 
 ## Troubleshooting
 
-- [Introduction overview](https://orderly.network/docs/troubleshooting/introduction): Starting point for diagnosing integration, account, transaction, and trading issues on Orderly.
-- [Transaction/order issues](https://orderly.network/docs/troubleshooting/user-issues/transaction-failures): How to triage failed transactions and orders by separating on-chain from API-level failures.
-- [Stuck/delayed withdrawals](https://orderly.network/docs/troubleshooting/user-issues/withdrawal-issues): How to diagnose delayed or stuck withdrawals by checking LayerZero messaging and chain status.
+- [Introduction overview](https://perpo.trade/docs/troubleshooting/introduction): Starting point for diagnosing integration, account, transaction, and trading issues on Perpo.
+- [Transaction/order issues](https://perpo.trade/docs/troubleshooting/user-issues/transaction-failures): How to triage failed transactions and orders by separating on-chain from API-level failures.
+- [Stuck/delayed withdrawals](https://perpo.trade/docs/troubleshooting/user-issues/withdrawal-issues): How to diagnose delayed or stuck withdrawals by checking LayerZero messaging and chain status.
