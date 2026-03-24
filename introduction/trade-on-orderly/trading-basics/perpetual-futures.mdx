@@ -13,25 +13,25 @@ A Perpetual Futures ("perps") contract is a derivative that lets you speculate o
 
 3. **Deeper liquidity:** Futures markets have significantly higher volume than spot, allowing you to enter and exit with less price impact.
 
-## Orderly USDC Perpetual Futures contracts
+## Perpo USDC Perpetual Futures contracts
 
-All perps on Orderly are USDC-based. Your collateral is in USDC, and all contracts are quoted and settled in USDC.
+All perps on Perpo are USDC-based. Your collateral is in USDC, and all contracts are quoted and settled in USDC.
 
 ## Margin modes
 
-Orderly supports two margin modes, both available simultaneously on every symbol:
+Perpo supports two margin modes, both available simultaneously on every symbol:
 
 - **Cross Margin** (default): Your deposited USDC is shared across all cross-margin positions to calculate a single margin ratio. Profitable positions automatically offset losing ones.
 - **Isolated Margin**: Each position has its own dedicated margin. Losses are capped at the margin assigned to that position and do not affect the rest of your account.
 
-You specify the margin mode when placing each order. For a detailed comparison, see [Isolated Margin](/introduction/trade-on-orderly/perpetual-futures/isolated-margin).
+You specify the margin mode when placing each order. For a detailed comparison, see [Isolated Margin](/introduction/trade-on-perpo/perpetual-futures/isolated-margin).
 
 ## Supported leverages
 
-Integer values from 1x to 100x (1x, 2x, 3x, ... 100x). The maximum leverage available depends on the specific market -- see [Margin, Leverage & PnL](/introduction/trade-on-orderly/perpetual-futures/margin-leverage-and-pnl) for per-market limits.
+Integer values from 1x to 100x (1x, 2x, 3x, ... 100x). The maximum leverage available depends on the specific market -- see [Margin, Leverage & PnL](/introduction/trade-on-perpo/perpetual-futures/margin-leverage-and-pnl) for per-market limits.
 
 ## Position mode
 
-Orderly uses one-sided position mode within each margin mode. You cannot hold both a long and a short on the same contract in the same margin mode -- opening the opposite direction will reduce or close your existing position.
+Perpo uses one-sided position mode within each margin mode. You cannot hold both a long and a short on the same contract in the same margin mode -- opening the opposite direction will reduce or close your existing position.
 
 However, since Cross and Isolated are independent, you can hold a Cross position and an Isolated position on the same symbol at the same time (e.g., a Cross long and an Isolated short on ETH-PERP), each with independent margin and liquidation price.
