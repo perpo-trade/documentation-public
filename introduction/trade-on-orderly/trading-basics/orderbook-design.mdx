@@ -1,13 +1,13 @@
 ---
-title: "Orderly Orderbook Design"
-description: "How Orderly's central limit order book combines CEX-level performance with on-chain settlement."
+title: "Perpo Orderbook Design"
+description: "How Perpo's central limit order book combines CEX-level performance with on-chain settlement."
 ---
 
-Orderly is an omnichain decentralized orderbook protocol. It provides the matching engine, liquidity, and infrastructure for builders (DEXes) to offer perpetual futures trading without building it themselves.
+Perpo is an omnichain decentralized orderbook protocol. It provides the matching engine, liquidity, and infrastructure for builders (DEXes) to offer perpetual futures trading without building it themselves.
 
 ## Orderbook design
 
-Orderly uses a **central limit order book (CLOB)** -- the same type of system used by major centralized exchanges. The key difference: Orderly settles everything on-chain, combining CEX-level performance with decentralized transparency.
+Perpo uses a **central limit order book (CLOB)** -- the same type of system used by major centralized exchanges. The key difference: Perpo settles everything on-chain, combining CEX-level performance with decentralized transparency.
 
 - **Transparency:** All orders are recorded on the blockchain and publicly verifiable.
 - **Security:** On-chain settlement means data is immutable and tamper-proof.
@@ -16,7 +16,7 @@ Orderly uses a **central limit order book (CLOB)** -- the same type of system us
 
 ## Omnichain approach
 
-Unlike most DEXes that run separate order books per chain, Orderly brings all orders from all supported chains into a **single shared order book**. This unifies liquidity across chains.
+Unlike most DEXes that run separate order books per chain, Perpo brings all orders from all supported chains into a **single shared order book**. This unifies liquidity across chains.
 
 The system has three layers:
 
@@ -24,7 +24,7 @@ The system has three layers:
 
 - Where your funds reside. You interact with this layer when registering, depositing, and withdrawing.
 
-**Settlement Layer (Orderly L2)** -- on a single chain
+**Settlement Layer (Perpo L2)** -- on a single chain
 
 - A transaction ledger that stores all transaction and user data on-chain. Users do not interact with it directly.
 
@@ -32,11 +32,11 @@ The system has three layers:
 
 - Where trade execution happens. Includes the matching engine, risk engine, and other services. You interact with this layer when managing orders.
 
-After orders are matched, they settle on the Orderly L2 (built with OP Stack), which periodically settles to Ethereum. Cross-layer communication (deposits, withdrawals, balance updates) is powered by LayerZero.
+After orders are matched, they settle on the Perpo L2 (built with OP Stack), which periodically settles to Ethereum. Cross-layer communication (deposits, withdrawals, balance updates) is powered by LayerZero.
 
 ## MEV protection
 
-MEV (maximal extractable value) is when someone profits by front-running or reordering transactions before they are confirmed on-chain. Orderly mitigates this through:
+MEV (maximal extractable value) is when someone profits by front-running or reordering transactions before they are confirmed on-chain. Perpo mitigates this through:
 
 - **Fast matching:** The sequencer matches orders with minimal latency, leaving little window for front-running.
 - **Deep liquidity:** A deep order book makes price manipulation significantly harder.
