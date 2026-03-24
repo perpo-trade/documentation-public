@@ -37,7 +37,7 @@ async function main() {
   const llms = await readJson<LlmsConfig>("llms.config.json");
 
   const openApiSpecs = new Map<string, OpenApiSummaryMap>();
-  for (const specName of ["orderly.openapi", "sv.openapi"]) {
+  for (const specName of ["perpo.openapi", "sv.openapi"]) {
     const summaries = await parseOpenApiSummaries(specName);
     openApiSpecs.set(specName, summaries);
   }
@@ -212,7 +212,7 @@ async function readPage(
   const title = extractTitle(raw, route);
     const summary =
       route === "home"
-      ? "Orderly documentation landing page with navigation to integration guides, API references, SDKs, Strategy Vault docs, troubleshooting, and release notes."
+      ? "Perpo documentation landing page with navigation to integration guides, API references, SDKs, Strategy Vault docs, troubleshooting, and release notes."
       : extractSummary(raw, openApiSpecs);
 
   return {
